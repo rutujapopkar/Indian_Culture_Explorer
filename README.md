@@ -28,17 +28,11 @@ To run this project locally, follow these quick setup steps:
 ### 1. Prerequisites
 Ensure you have [Node.js](https://nodejs.org/) installed on your machine.
 
-### 2. Installation
+### 2. Installation and Working
 Clone the repository and install the dependencies:
 ```bash
-git clone [https://github.com/YOUR_USERNAME/indian-culture-explorer.git](https://github.com/YOUR_USERNAME/indian-culture-explorer.git)
+git clone https://github.com/rutujapopkar/Indian_Culture_Explorer
 cd indian-culture-explorer
 npm install
-
-### 3. Available Scripts
-
-In the project directory, you can run:
-
-    npm start Runs the app in development mode. Open http://localhost:3000 to view it in your browser. The page will auto-reload when you make code modifications.
-
-    npm run build Builds the application for production to the build folder, correctly bundling and optimizing React for peak performance.
+npm start
+npm run build
