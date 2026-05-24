@@ -1,0 +1,109 @@
+/* src/Map.css */
+
+/* -------------------- Main Container -------------------- */
+.india-map-container {
+  width: 580px;
+  padding: 10px;
+  background-color: transparent;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column; /* Map first, footer second */
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* -------------------- Map Area -------------------- */
+.html-map-area {
+  width: 100%;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  background-color: transparent;
+  position: relative; /* For drop zones */
+}
+
+/* -------------------- Footer Below the Map -------------------- */
+.map-footer {
+  width: 100%;
+  text-align: center;
+  margin-top: 15px; /* Creates space below the map */
+  position: relative;
+  margin-left: -20%;
+  z-index: 10;
+}
+
+/* Footer Text Styling */
+.map-title {
+  color: #ff7f27; /* Orange */
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-left: -50%;
+  margin: 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.map-subtitle {
+  color: #28a745; /* Green */
+  font-weight: 400;
+  margin-top: 5px;
+}
+
+/* -------------------- Drop Zone Styling -------------------- */
+.state-drop-zone {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border: none;
+  background-color: transparent;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: drop;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect */
+.state-drop-zone:hover {
+  background-color: rgba(0, 123, 255, 0.15);
+}
+
+/* Highlight when correctly placed */
+.placed-state {
+  background-color: rgba(40, 167, 69, 0.2);
+  box-shadow: 0 0 10px rgba(40, 167, 69, 0.5);
+}
+
+/* Small dot marker */
+.state-dot {
+  width: 7px;
+  height: 7px;
+  background-color: #f3f0f0;
+  border-radius: 50%;
+  margin-bottom: 5px;
+  pointer-events: none;
+}
+
+/* Placed product names */
+.placed-items-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+  pointer-events: none;
+}
+
+.placed-item-tag {
+  font-size: 0.8rem;
+  color: #28a745;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+/* Completed Map Effect */
+.map-complete {
+  box-shadow: 0 0 20px 5px rgba(40, 167, 69, 0.8);
+}

@@ -1,0 +1,84 @@
+/* src/LandingPage.css */
+
+.landing-container {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+.content-overlay {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    color: white; 
+    padding: 50px 80px;
+    border-radius: 15px;
+    transition: transform 0.5s ease;
+}
+
+/* Hover Effect 1: Content Box Tilt */
+.content-overlay:hover {
+    transform: rotateZ(-0.5deg) scale(1.02);
+}
+
+.content-overlay h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    letter-spacing: 5px;
+    text-shadow: 2px 2px 4px #000;
+    transition: color 0.5s ease;
+}
+
+/* Hover Effect 2: Text Color Shift */
+.content-overlay:hover h1 {
+    color: #28a745; 
+}
+
+.content-overlay p {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 3px #000;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effect 3: Secondary Text Bounce/Scale */
+.content-overlay:hover p {
+    transform: scale(1.1);
+}
+
+/* Attractive Hover Button */
+.start-button {
+    background-color: #ffc107; 
+    border: 3px solid transparent;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease; 
+}
+
+/* Hover Effect 4: Pulsating glow and border change */
+.start-button:hover {
+    background-color: #e0a800; 
+    transform: scale(1.05);
+    border-color: white;
+    box-shadow: 0 0 25px rgba(255, 193, 7, 0.9), 0 0 5px rgba(0, 0, 0, 0.8);
+}

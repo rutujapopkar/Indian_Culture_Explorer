@@ -1,0 +1,78 @@
+/* src/App.css */
+
+body {
+    /* Using 'Inter' for a modern, clean look */
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    /* Ensure the body takes up the full viewport height */
+    min-height: 100vh;
+}
+
+.app-container {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    min-height: 100vh;
+    padding: 20px 0;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+
+    z-index: 1;
+    overflow: hidden; /* ensures overlay doesn’t leak outside */
+}
+
+.app-container { /* Positioning context for the faded overlay */ 
+    position: relative; /* Background properties are set in App.js using inline styles */ 
+    background-size: cover; 
+    background-position: center; 
+    background-attachment: fixed; 
+    min-height: 100vh; 
+    padding: 20px 0; /* Vertical padding only to ensure content is centered */ 
+    max-width: 100%; 
+    margin: 0 auto; 
+    text-align: center; /* Ensure all content (map, list) is above the overlay */ 
+    z-index: 1; }
+
+.main-title {
+    color: #fc8134; /* White title for high contrast */
+    margin-bottom: 5px;
+    padding-top: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Strong shadow for visibility */
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.game-area {
+    display: flex;
+    justify-content: center; /* Center the map and list horizontally */
+    align-items: flex-start;
+    margin-top: 30px;
+    gap: 40px; /* Spacing between map and list */
+    padding: 0 20px; /* Inner padding for mobile/small viewports */
+}
+
+/* Back Button Styling */
+.back-button {
+    position: fixed; 
+    top: 20px;
+    left: 20px;
+    background-color: #636869; /* Blue button */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+    z-index: 10;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}

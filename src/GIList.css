@@ -1,0 +1,83 @@
+/* src/GIList.css */
+
+.gi-list-container {
+    /* Set a fixed width to make the list static and balance the layout */
+    width: 450px; 
+    padding: 10px; 
+    background-color: transparent;
+    border-radius: 0; 
+    box-shadow: none; 
+    text-align: left; 
+    margin-top: -10px;
+
+}
+
+.gi-list-container h4 {
+    color: #fc8134; 
+    padding-bottom: 10px;
+    margin-top: 0;
+    margin-left: 5%;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); 
+}
+
+/* --- GRID LAYOUT (4 items per line) --- */
+.gi-icons-grid {
+    display: grid;
+    /* Enforce 4 columns (4 products per line) */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 8px; 
+    margin-top: 15px;
+    
+    /* Set width slightly less than 100% for inner spacing */
+    width: 95%; 
+    /* Force the entire grid block to the left */
+    margin-left: 0;
+    margin-right: auto; 
+}
+
+.gi-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    /* Enforce small square shape */
+    aspect-ratio: 1 / 1; 
+    width: 100%;
+    
+    padding: 4px; 
+    
+    background-color: transparent; 
+    box-shadow: none; 
+    border: none;
+    
+    border-radius: 8px;
+    cursor: grab;
+    font-size: 0.8rem; 
+    transition: transform 0.2s;
+    color: #fffdfd;
+    font-weight: 600;
+    /* Use space-around for proper vertical alignment and spacing */
+    justify-content: space-around; 
+}
+
+.gi-icon:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+}
+
+.gi-product-image {
+    width: 80%; /* Make image take up 80% of the icon width */
+    height: auto;
+    object-fit: contain;
+    border-radius: 4px;
+    pointer-events: none; /* Prevents interference with drag events */
+}
+
+.gi-name {
+    text-align: center;
+    font-size: 0.75rem;
+    line-height: 1.1;
+    overflow: hidden;
+    max-height: 2.2em; /* Show max two lines of text */
+}
